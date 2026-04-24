@@ -6,3 +6,5 @@ def emotion_detector(text_to_analyze):
     input_json = { "raw_document": { "text": text_to_analyze } }
     api_get = requests.get(url=url, header=headers, input_json=input_json)
     return api_get.text #git test2
+
+emotion_detector("Testing the emotion detector, I am frustrated")
