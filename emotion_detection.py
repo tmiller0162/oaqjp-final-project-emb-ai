@@ -11,4 +11,4 @@ def emotion_detector(text_to_analyze):
     api_get = requests.post(url=url, headers=header, json=input_json)
     return api_get.text 
 
-emotion_detector("I am very happy about this")
+print(emotion_detector("I am very happy about this"))
