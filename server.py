@@ -13,12 +13,12 @@ def pass_input():
     emotions = emotion_detector(text)
     return_str = (
             "For the given statement, the system response is "
-            f"'anger': {emotions[anger]}, "
-            f"'disgust': {emotions[disgust]}, "
-            f"'fear': {emotions[fear]}, "
-            f"'joy': {emotions[joy]}, and "
-            f"'sadness': {emotions[sadness]}. "
-            f"The dominant emotion is {emotions[dominant_emotion]}."
+            f"'anger': {emotions['anger']}, "
+            f"'disgust': {emotions['disgust']}, "
+            f"'fear': {emotions['fear']}, "
+            f"'joy': {emotions['joy']}, and "
+            f"'sadness': {emotions['sadness']}. "
+            f"The dominant emotion is {emotions['dominant_emotion']}."
             )
     return return_str
 
