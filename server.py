@@ -10,7 +10,18 @@ def load_page():
 @app.route("/emotionDetector")
 def pass_input():
     text = request.args.get("textToAnalyze")
-    return emotion_detector(text)
+    emotions = emotion_detector(text)
+    return_str = (
+            "For the given statement, the system response is "
+            f"'anger': {emotions[anger]}, "
+            f"'disgust': {emotions[disgust]}, "
+            f"'fear': {emotions[fear]}, "
+            f"'joy': {emotions[joy]}, and "
+            f"'sadness': {emotions[sadness]}. "
+            f"The dominant emotion is {emotions[dominant_emotion]}."
+            )
+    return return_str
+
 
 if __name__=="__main__":
     app.run()
