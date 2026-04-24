@@ -1,3 +1,4 @@
+"""Runs the Flask webserver"""
 from flask import Flask, render_template, request
 from EmotionDetect.emotion_detection import emotion_detector
 
