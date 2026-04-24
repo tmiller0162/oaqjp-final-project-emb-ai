@@ -1,5 +1,5 @@
+from emotion_detection import emotion_detector
 from flask import Flask, render_template, request
-import requests
 
 app = Flask("Emotion Detection")
 
@@ -10,8 +10,7 @@ def load_page():
 @app.route("/emotionDetector")
 def pass_input():
     text = request.args.get("textToAnalyze")
-    print(text)
-    return
+    return emotion_detector(text)
 
 if __name__=="__main__":
     app.run()
