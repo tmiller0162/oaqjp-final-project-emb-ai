@@ -21,5 +21,6 @@ def emotion_detector(text_to_analyze):
             'sadness': emotions['sadness'],
             'dominant_emotion': max_emotion
             }
+    return dict_return
 
 print(emotion_detector("I am very happy about this"))
