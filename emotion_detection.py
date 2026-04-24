@@ -11,8 +11,9 @@ def emotion_detector(text_to_analyze):
     input_json = { "raw_document": { "text": text_to_analyze } }
     api_get = requests.post(url=url, headers=header, json=input_json)
     raw_output = api_get.text
-    emotions = json.loads(raw_output)['emotionPredictions']['emotion']
-    print(max(emotions, key=emotions.get))
+    emotions = json.loads(raw_output) #['emotionPredictions']['emotion']
+    #print(max(emotions, key=emotions.get))
+    print(emotions)
     dict_return = {
             'anger': anger_s,
             'disgust': disgust_s,
