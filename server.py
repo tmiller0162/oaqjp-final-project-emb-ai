@@ -11,6 +11,8 @@ def load_page():
 def pass_input():
     text = request.args.get("textToAnalyze")
     emotions = emotion_detector(text)
+    if emotions['dominant_emotion'] == None:
+        return "Invalid text! Please try again!", 400
     return_str = (
             "For the given statement, the system response is "
             f"'anger': {emotions['anger']}, "
