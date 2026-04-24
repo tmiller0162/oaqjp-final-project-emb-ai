@@ -7,4 +7,4 @@ def emotion_detector(text_to_analyze):
     api_get = requests.get(url=url, headers=header, json=input_json)
     return api_get.text #git test2
 
-emotion_detector("Testing the emotion detector, I am frustrated")
+print(emotion_detector("Testing the emotion detector, I am frustrated"))
